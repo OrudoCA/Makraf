@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/src/shared/images/landscape.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 2rem;
+}
+
+.logo {
+}
+
+.line {
+  width: 60%;
+  height: 0.2rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.blocks {
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 154rem;
+}
+
+.server {
+  height: 50rem;
+}
+
+.players {
+  height: 50rem;
+}
+
+.mods {
+  height: 50rem;
+}
