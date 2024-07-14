@@ -1,29 +1,16 @@
 import style from './style.module.scss'
-import { MainVersion } from '@/widgets/main/version'
+import { Main } from '@/widgets/main'
+import { Server } from '@/widgets/info'
+import { ModInfo } from '@/widgets/mods'
+import { PlayerInfo } from '@/widgets/players'
 export const HomePage = () => {
-  const version = '1.21'
   return (
     <>
-      <div className={style.main}>
-        <div className={style.container}>
-          <img
-            className={style.logo}
-            src="/src/shared/images/title.png"
-            alt=""
-          />
-          <hr className={style.line} />
-          <MainVersion version={version} />
-        </div>
-        <img
-          className={style.arrow}
-          src="/src/shared/images/arrow.svg"
-          alt=""
-        />
-      </div>
+      <Main />
       <div className={style.blocks}>
-        <div className={style.server}></div>
-        <div className={style.players}></div>
-        <div className={style.mods}></div>
+        <Server />
+        <PlayerInfo />
+        <ModInfo />
       </div>
     </>
   )
