@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(#d56d4d, #c44c4f);
+  width: 40rem;
+  height: 7.5rem;
+  color: white;
+}
+
+.image {
+  width: 3.5rem;
+  height: 5rem;
+  size: 100%;
+}
+.text {
+  font-size: 3.5rem;
+}
