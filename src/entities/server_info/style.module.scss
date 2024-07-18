@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   width: 100%;
   height: 100%;
 }
@@ -24,12 +25,14 @@
   align-items: center;
   border-radius: 2.3rem;
   background-color: white;
-  width: 44rem;
-  height: 9rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
   & > h6 {
     background: linear-gradient(#2ea1e1, #2038a6);
     -webkit-background-clip: text;
-    font-size: 5rem;
+    background-clip: text;
+    font-size: 4rem;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -37,7 +40,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4rem;
   width: 100%;
   height: 100%;
 }

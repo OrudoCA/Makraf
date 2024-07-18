@@ -5,7 +5,7 @@ interface MainVersionProps {
 export const MainVersion = ({ version }: MainVersionProps) => {
   return (
     <span className={style.container}>
-      <p>Ванильный Minecraft Server {version}</p>
+      <p>Vanilla Minecraft Server on {version}</p>
     </span>
   )
 }

@@ -10,7 +10,6 @@ export const Server = () => {
   const { data: status } = useGetStatusQuery()
   const { data: players } = useGetPlayersCountQuery()
 
-  console.log('HUYYY', status)
   return (
     <div className={style.info}>
       <div className={style.info_container}>

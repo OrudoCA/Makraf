@@ -1,11 +1,13 @@
-.blocks {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin: 0 auto;
   background: white;
   padding: 2rem;
   width: 100%;
+  max-width: 144rem;
   height: fit-content;
 }

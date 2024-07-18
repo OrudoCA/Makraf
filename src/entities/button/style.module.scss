@@ -19,6 +19,7 @@
   & > p {
     background: linear-gradient(#d56d4d, #c44c4f);
     -webkit-background-clip: text;
+    background-clip: text;
     font-size: 2rem;
     -webkit-text-fill-color: transparent;
   }

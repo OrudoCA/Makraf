@@ -5,13 +5,14 @@ interface OnlineProps {
 }
 
 export const OnlineCounter = ({ count }: OnlineProps) => {
+  const countText = count !== undefined ? count.data : 'Loading...'
   return (
     <div className={style.container}>
       <span id={style.text_container}>
         <h6>Current players:</h6>
       </span>
       <span id={style.text_container}>
-        <span>{count?.count}</span>
+        <span>{countText}</span>
       </span>
     </div>
   )

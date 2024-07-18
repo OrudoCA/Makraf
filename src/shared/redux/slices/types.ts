@@ -8,15 +8,11 @@ export interface InfoResponse {
   info: string;
 }
 export interface PlayersCountResponse {
-  count: number;
+  data: number;
 }
 export interface PlayersMaxResponse {
   max: number;
 }
-export interface Player {
-  id: number;
-  name: string;
-}
 export interface PlayersListResponse {
-  list: Player[];
+  data: string[];
 }
