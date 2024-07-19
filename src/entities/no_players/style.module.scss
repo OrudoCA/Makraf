@@ -1,0 +1,12 @@
+@import '@/shared/styles/style.scss';
+.container {
+  margin: auto;
+  & > p {
+    @include text-gradient(#d56d4d, #c44c4f);
+    opacity: 80%;
+    font-weight: 900;
+    font-size: min(5rem, 10vw);
+    line-height: 110%;
+    text-align: center;
+  }
+}

@@ -1,14 +1,19 @@
+@import '@/shared/styles/style.scss';
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  border-radius: 6rem;
+  border-radius: min(6vw, 6rem);
   background-color: white;
+  padding: min(4vw, 4rem);
+  width: -moz-fit-content;
   width: fit-content;
+
+  height: -moz-fit-content;
   height: fit-content;
-  padding: 5rem;
+
   color: #2038a6;
 }
 
@@ -17,17 +22,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#2ea1e1, #2038a6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include text-gradient(#2ea1e1, #2038a6);
 
   & > h6 {
-    font-size: 4rem;
+    font-size: min(3vw, 4rem);
     line-height: 110%;
   }
   & > span {
     font-weight: 600;
-    font-size: 11rem;
+    font-size: min(5vw, 7rem);
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    flex-direction: row;
+    border-radius: min(4vw, 4rem);
+    width: 90%;
+  }
+  #text_container {
+    & > h6 {
+      font-size: min(5vw, 5rem);
+    }
+    & > span {
+      font-size: min(7vw, 8rem);
+    }
   }
 }

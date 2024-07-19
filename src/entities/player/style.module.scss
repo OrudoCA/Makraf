@@ -7,8 +7,12 @@
   border-radius: 1.25rem;
   background: linear-gradient(#d56d4d, #c44c4f);
   padding: 2rem;
+  width: -moz-fit-content;
   width: fit-content;
+
+  height: -moz-fit-content;
   height: fit-content;
+
   color: white;
 }
 
@@ -16,7 +20,23 @@
   width: 3.5rem;
   height: 5rem;
   size: 100%;
+  aspect-ratio: 1;
 }
 .text {
   font-size: 3.5rem;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    border-radius: min(1.25rem, 1.25vw);
+    padding: min(2rem, 2vw);
+  }
+
+  .image {
+    width: min(3.5rem, 3.5vw);
+    height: min(5rem, 5vw);
+  }
+  .text {
+    font-size: min(3.5rem, 3.5vw);
+  }
 }

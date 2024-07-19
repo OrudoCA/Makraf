@@ -8,6 +8,6 @@ export {
   useGetPlayersCountQuery,
   useGetPlayersMaxQuery,
   useGetPlayersListQuery,
-} from './slices/apiSlice.ts'
+} from './slices/apiSlice'
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
 export const useAppSelector = useSelector.withTypes<RootState>()

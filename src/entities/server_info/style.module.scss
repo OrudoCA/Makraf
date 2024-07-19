@@ -1,9 +1,10 @@
+@import '@/shared/styles/style.scss';
 .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  gap: 2rem;
   width: 100%;
   height: 100%;
 }
@@ -17,23 +18,24 @@
   width: 100%;
   height: 100%;
   font-weight: 600;
-  font-size: 3.5rem;
+  font-size: min(3vw, 4rem);
 }
 .text_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2.3rem;
+  border-radius: min(2.3vw, 2.3rem);
   background-color: white;
-  width: fit-content;
-  height: fit-content;
   padding: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  height: -moz-fit-content;
+  height: fit-content;
+
   & > h6 {
-    background: linear-gradient(#2ea1e1, #2038a6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 4rem;
-    -webkit-text-fill-color: transparent;
+    @include text-gradient(#2ea1e1, #2038a6);
+    font-size: min(3vw, 5rem);
   }
 }
 .logo {
@@ -41,5 +43,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  & > img {
+    width: min(29rem, 29vw);
+  }
 }
