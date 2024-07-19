@@ -20,7 +20,6 @@ export const PlayerList = () => {
           playersData.data.map((playerName: string, index: number) => (
             <Player
               key={index}
-              image_path={`src/shared/images/player.svg`}
               player_name={playerName}
               has_image={true}
             />
