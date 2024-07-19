@@ -1,8 +1,6 @@
 import style from './style.module.scss'
-interface PcholaProps {
-  pchola_path: string
-}
+import pchola from '@/shared/images/pchola.svg'
 
-export const Pchola = ({ pchola_path }: PcholaProps) => {
-  return <img className={style.pchola} src={pchola_path} alt="" />
+export const Pchola = () => {
+  return <img className={style.pchola} src={pchola} alt="" />
 }

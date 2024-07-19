@@ -5,10 +5,21 @@ import {
   useGetPlayersCountQuery,
   useGetStatusQuery,
 } from '@/shared/redux/hooks'
+import { useEffect } from 'react'
 
 export const Server = () => {
-  const { data: status } = useGetStatusQuery()
-  const { data: players } = useGetPlayersCountQuery()
+  const { data: status, refetch: refetchStatus } = useGetStatusQuery()
+  const { data: players, refetch: refetchPlayers } =
+    useGetPlayersCountQuery(undefined)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      refetchStatus()
+      refetchPlayers()
+    }, 5000)
+
+    return () => clearInterval(interval) // Cleanup on component unmount
+  }, [])
 
   return (
     <div className={style.info}>

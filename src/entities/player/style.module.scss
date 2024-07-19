@@ -40,3 +40,9 @@
     font-size: min(3.5rem, 3.5vw);
   }
 }
+
+@media (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
+}

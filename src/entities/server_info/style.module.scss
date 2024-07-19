@@ -35,7 +35,7 @@
 
   & > h6 {
     @include text-gradient(#2ea1e1, #2038a6);
-    font-size: min(3vw, 5rem);
+    font-size: min(4vw, 5rem);
   }
 }
 .logo {
@@ -45,5 +45,11 @@
   width: 100%;
   & > img {
     width: min(29rem, 29vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .text_container {
+    padding: 1rem;
   }
 }
