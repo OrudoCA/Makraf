@@ -13,7 +13,6 @@ export const PlayerList = () => {
     return () => clearInterval(interval) // Cleanup on component unmount
   }, [])
   const containerClass = `${style.container} ${!playersData || playersData.data.length === 0 ? style.hidden : ''}`
-  console.log(containerClass)
   return (
     <div className={containerClass}>
       <div className={style.subcontainer}>

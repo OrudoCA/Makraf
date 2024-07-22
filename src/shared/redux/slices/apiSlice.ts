@@ -3,7 +3,7 @@ import { NameResponse,StatusResponse,InfoResponse,PlayersCountResponse, PlayersM
 import { config } from '@/shared/config/index'
 export const api = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: config.apiUrl }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://mcapi.orudo.ru' }),
   endpoints: (builder) => ({
     getName: builder.query<NameResponse, void>({
       query: () => `/name`,
