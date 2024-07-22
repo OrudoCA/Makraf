@@ -1,14 +1,33 @@
 .container {
+  border-radius: 4rem;
+  background: linear-gradient(#d56d4d, #c44c4f);
+  padding: 2rem;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.subcontainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
+  -moz-transition: all 0.2s ease-in;
+  /* WebKit */
+  -webkit-transition: all 0.2s ease-in;
+  /* Opera */
+  -o-transition: all 0.2s ease-in;
+  /* Standard */
+  transition: all 0.2s ease-in;
+  border-radius: 2rem;
+  background: url('/src/shared/images/bgdot.svg');
+  background-size: 2rem;
+  background-repeat: repeat;
+  padding: 1rem;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
 }
-
 .heading {
   display: flex;
   flex-direction: row;
@@ -38,6 +57,13 @@
   max-width: 134rem;
   height: 100%;
   min-height: 28rem;
+}
+
+.hidden {
+  padding: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media (max-width: 550px) {

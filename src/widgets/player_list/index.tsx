@@ -8,25 +8,25 @@ export const PlayerList = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       refetch()
-    }, 5000) // 15 seconds
+    }, 10000) // 15 seconds
 
     return () => clearInterval(interval) // Cleanup on component unmount
   }, [])
+  const containerClass = `${style.container} ${!playersData || playersData.data.length === 0 ? style.hidden : ''}`
+  console.log(containerClass)
   return (
-    <div className={style.container}>
-      <span className={style.heading}>Player list:</span>
-      <div className={style.grid}>
-        {playersData !== undefined && playersData.data.length ? (
-          playersData.data.map((playerName: string, index: number) => (
-            <Player
-              key={index}
-              player_name={playerName}
-              has_image={true}
-            />
-          ))
-        ) : (
-          <NoPlayers />
-        )}
+    <div className={containerClass}>
+      <div className={style.subcontainer}>
+        <span className={style.heading}>Player list:</span>
+        <div className={style.grid}>
+          {playersData !== undefined ? (
+            playersData.data.map((playerName: string, index: number) => (
+              <Player key={index} player_name={playerName} has_image={true} />
+            ))
+          ) : (
+            <NoPlayers />
+          )}
+        </div>
       </div>
     </div>
   )

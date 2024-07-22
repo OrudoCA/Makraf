@@ -1,9 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { NameResponse,StatusResponse,InfoResponse,PlayersCountResponse, PlayersMaxResponse, PlayersListResponse } from './types';
-
+import { config } from '@/shared/config/index'
 export const api = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://mc.orudo.ru' }),
+  baseQuery: fetchBaseQuery({ baseUrl: config.apiUrl }),
   endpoints: (builder) => ({
     getName: builder.query<NameResponse, void>({
       query: () => `/name`,

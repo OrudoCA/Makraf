@@ -1,3 +1,5 @@
+@import '/src/shared/styles/vars.scss';
+
 .container {
   position: relative;
   border-radius: 4rem;
@@ -16,7 +18,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  border: solid white 0.3rem;
+  border: solid $color_white 0.3rem;
   border-radius: 2rem;
   background: linear-gradient(#d56d4d, #c44c4f);
   padding: 3rem;
@@ -27,7 +29,7 @@
     font-size: min(7rem, 10vw);
   }
   & > a {
-    color: white;
+    color: $color_white;
     font-size: min(3rem, 5vw);
     text-decoration: underline;
   }

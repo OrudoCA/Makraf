@@ -1,3 +1,5 @@
+@import '/src/shared/styles/vars.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,8 @@
   align-items: center;
   gap: 2rem;
   margin: 0 auto;
-  background: white;
-  padding: 2rem;
+  background: $color_white;
+  padding: 4rem 2rem;
   width: 100%;
   max-width: 144rem;
   height: -moz-fit-content;

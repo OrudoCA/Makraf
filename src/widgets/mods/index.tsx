@@ -1,8 +1,7 @@
 import { Pchola } from '@/entities/pchola'
 import style from './style.module.scss'
 import { Button } from '@/entities/button'
-import archive from '@/shared/images/archive.svg'
-import multimc from '@/shared/images/multimc.svg'
+import { config } from '@/shared/config'
 
 export const ModInfo = () => {
   return (
@@ -10,8 +9,8 @@ export const ModInfo = () => {
       <div className={style.mods}>
         <h6>Client-side mods:</h6>
         <div className={style.buttons}>
-          <Button text="Zip" zip={true} path="#" />
-          <Button text="MultiMC" zip={false} path="#" />
+          <Button text="Zip" zip={true} path={config.zipUrl} />
+          <Button text="MultiMC" zip={false} path={config.multimcUrl} />
         </div>
         <a href="">*Mods info</a>
       </div>
